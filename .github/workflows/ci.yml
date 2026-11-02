@@ -14,13 +14,13 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Check code compile
-        run: python -m py_compile calc.py test_calc.py
-
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.12"
+
+      - name: Check code compile
+        run: python -m py_compile calc.py test_calc.py
 
       - name: Install dependencies
         run: |
